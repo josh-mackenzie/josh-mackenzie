@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- Source for banner.png. Rendered at 2x (2560x800) so it stays sharp when GitHub scales it down:
+     chrome --headless=new --hide-scrollbars --force-device-scale-factor=2 --virtual-time-budget=6000 --window-size=1280,400 --screenshot=banner.png "file:///<path>/banner-source.html" -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=block">
+<style>
+  html, body { margin: 0; }
+  body {
+    position: relative;
+    width: 1280px; height: 400px; box-sizing: border-box; overflow: hidden;
+    padding: 72px 88px;
+    background: #1e5b45; color: #fff;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+  /* Dot field on the right, fading out towards the text */
+  .dots {
+    position: absolute; inset: 0 0 0 auto; width: 620px;
+    background-image: radial-gradient(circle, #8fb39f 3.2px, transparent 3.7px);
+    background-size: 28px 28px;
+    background-position: 14px 14px;
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.7), rgba(0,0,0,0.25) 55%, transparent);
+            mask-image: linear-gradient(to left, rgba(0,0,0,0.7), rgba(0,0,0,0.25) 55%, transparent);
+  }
+  .content { position: relative; }
+  .role { font: 500 24px/1 "IBM Plex Mono", monospace; color: #a8d9bf; letter-spacing: 0.01em; }
+  h1 { margin: 22px 0 0; font-size: 92px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+  p { margin: 28px 0 0; font-size: 28px; line-height: 1.4; color: #d7eadf; }
+  .status { margin-top: 30px; font: 400 21px/1 "IBM Plex Mono", monospace; color: #a8d9bf; }
+  .status::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #a8d9bf; margin-right: 12px; vertical-align: 2px; }
+</style>
+</head>
+<body>
+  <div class="dots"></div>
+  <div class="content">
+    <div class="role">Data Engineer · UK-based</div>
+    <h1>Josh Mackenzie</h1>
+    <p>Data platforms end to end: Python, dbt, Azure and <span style="white-space:nowrap">LLM-powered</span> data tools.</p>
+    <div class="status">Open to remote roles</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- Source for btn-*.png (rendered at 2x, shown at half size in the README).
+     Render one button per run: open with ?label=Website etc. -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: transparent; }
+  body { display: inline-block; padding: 0; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    height: 64px; padding: 0 30px;
+    border-radius: 32px;
+    background: #1e5b45; color: #fff;
+    /* Same type as the shields.io "for-the-badge" style: bold, uppercase, tracked Verdana */
+    font: 700 22px/1 Verdana, Geneva, "DejaVu Sans", sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .arrow { color: #a8d9bf; font-size: 24px; letter-spacing: 0; }
+</style>
+</head>
+<body>
+  <span class="btn"><span id="label">Website</span><span class="arrow">↗</span></span>
+  <script>
+    var p = new URLSearchParams(location.search).get('label');
+    if (p) document.getElementById('label').textContent = p;
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- Source for stack.png. Render at 2x for crispness:
+     chrome --headless=new --hide-scrollbars --force-device-scale-factor=2 --virtual-time-budget=6000 --window-size=1000,600 --screenshot=stack.png "file:///<path>/stack-source.html" -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@500&display=block">
+<style>
+  html, body { margin: 0; }
+  body {
+    position: relative; overflow: hidden;
+    width: 1000px; height: 600px; box-sizing: border-box;
+    padding: 52px 60px;
+    background: #1e5b45;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+  /* Same fading dot field as the banner */
+  .dots {
+    position: absolute; inset: 0 0 0 auto; width: 300px;
+    background-image: radial-gradient(circle, #8fb39f 3.2px, transparent 3.7px);
+    background-size: 28px 28px; background-position: 14px 14px;
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.7), rgba(0,0,0,0.25) 55%, transparent);
+            mask-image: linear-gradient(to left, rgba(0,0,0,0.7), rgba(0,0,0,0.25) 55%, transparent);
+  }
+  .rows { position: relative; display: grid; gap: 18px; }
+  .row { display: grid; grid-template-columns: 190px 1fr; align-items: center; }
+  .label {
+    font: 500 18px/1 "IBM Plex Mono", monospace;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: #a8d9bf;
+  }
+  .tiles { display: flex; gap: 14px; }
+  .tile {
+    width: 116px; height: 108px; box-sizing: border-box;
+    border-radius: 16px;
+    background: #2b6651;   /* solid, so the dot field never shows through */
+    border: 1px solid rgba(168, 217, 191, 0.18);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  }
+  /* Every logo the same size and pure white, whatever the original colours */
+  .tile img { width: 40px; height: 40px; object-fit: contain; filter: brightness(0) invert(1); }
+  .tile span { font-size: 16px; color: #d7eadf; white-space: nowrap; }
+</style>
+</head>
+<body>
+  <div class="dots"></div>
+  <div class="rows">
+    <div class="row"><div class="label">Languages</div><div class="tiles">
+      <div class="tile"><img src="icons/python.svg" alt=""><span>Python</span></div>
+      <div class="tile"><img src="icons/sql.svg" alt=""><span>SQL</span></div>
+      <div class="tile"><img src="icons/gnubash.svg" alt=""><span>Bash</span></div>
+    </div></div>
+    <div class="row"><div class="label">Data</div><div class="tiles">
+      <div class="tile"><img src="icons/dbt.svg" alt=""><span>dbt</span></div>
+      <div class="tile"><img src="icons/duckdb.svg" alt=""><span>DuckDB</span></div>
+      <div class="tile"><img src="icons/postgresql.svg" alt=""><span>PostgreSQL</span></div>
+      <div class="tile"><img src="icons/databricks.svg" alt=""><span>Databricks</span></div>
+      <div class="tile"><img src="icons/prefect.svg" alt=""><span>Prefect</span></div>
+    </div></div>
+    <div class="row"><div class="label">Cloud &amp; infra</div><div class="tiles">
+      <div class="tile"><img src="icons/azure.svg" alt=""><span>Azure</span></div>
+      <div class="tile"><img src="icons/azuredevops.svg" alt=""><span>Azure DevOps</span></div>
+      <div class="tile"><img src="icons/terraform.svg" alt=""><span>Terraform</span></div>
+      <div class="tile"><img src="icons/opentofu.svg" alt=""><span>OpenTofu</span></div>
+    </div></div>
+    <div class="row"><div class="label">LLM<span style="text-transform: none">s</span></div><div class="tiles">
+      <div class="tile"><img src="icons/claude.svg" alt=""><span>Claude</span></div>
+      <div class="tile"><img src="icons/googlegemini.svg" alt=""><span>Gemini</span></div>
+      <div class="tile"><img src="icons/openai.svg" alt=""><span>OpenAI</span></div>
+    </div></div>
+  </div>
+</body>
+</html>
