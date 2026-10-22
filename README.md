@@ -6,7 +6,7 @@
   <a href="https://joshmackenzie.co.uk/assets/pdf/josh-mackenzie-cv.pdf"><img src="./btn-cv.png" alt="CV (PDF)" height="32"></a>
 </p>
 
-I'm a data engineer who builds data platforms end to end. I'm currently the sole data engineer at a carbon reporting platform, owning the data platform and helping shape the product.
+I build data platforms end to end. I'm currently the sole data engineer at a carbon reporting company, where I own the data stack and help shape the product.
 
 Open to remote data engineering roles.
 
